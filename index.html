@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Include jsPDF library -->
+</head>
+<body>
+    <div class="task-manager-container">
+        <h1>Task Manager</h1>
+
+        <!-- Category Input Section -->
+        <div class="category-input">
+            <input type="text" id="categoryInput" placeholder="Add a new category">
+            <button id="addCategoryBtn">Add Category</button>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="category-filter">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+
+        <!-- Task Input Section -->
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <select id="taskCategory">
+                <option value="">Select Category</option>
+            </select>
+            <input type="datetime-local" id="taskTimeframe"> <!-- Updated to datetime-local -->
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Download Button -->
+        <button id="downloadBtn">Download PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.task-manager-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;  /* Use percentage for responsive width */
+    max-width: 800px;  /* Maximum width on larger screens */
+    text-align: center;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .task-manager-container {
+        width: 95%;  /* Take up more width on smaller screens */
+        max-width: 100%;  /* Ensure it doesn't overflow */
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Category input and task input styles */
+.category-input,
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#categoryInput, #taskInput, #taskTimeframe {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#addCategoryBtn, #addTaskBtn, #downloadBtn {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-left: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addCategoryBtn:hover, #addTaskBtn:hover, #downloadBtn:hover {
+    background-color: #45a049;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Task list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+}
+
+/* Download button styles */
+#downloadBtn {
+    margin-top: 20px;
+    background-color: #3b82f6;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#downloadBtn:hover {
+    background-color: #2563eb;
+}
+
+.category-filter {
+    margin-bottom: 10px;
+}
+
+.category-input input, .category-input button {
+    width: 48%;
+}
+
+.task-input input, .task-input button {
+    width: 48%;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .category-input, .task-input {
+        flex-direction: column;  /* Stack inputs vertically on small screens */
+        align-items: center;  /* Center-align elements */
+    }
+
+    #categoryInput, #taskInput, #taskTimeframe, #addCategoryBtn, #addTaskBtn {
+        width: 100%;  /* Full width on mobile */
+        margin-bottom: 10px;  /* Add spacing between inputs */
+    }
+
+    .category-input button, .task-input button {
+        margin-left: 0;  /* Remove margin for buttons on mobile */
+    }
+}
